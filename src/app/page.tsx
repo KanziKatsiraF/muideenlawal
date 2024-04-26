@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { projects } from "c:/Users/Zenbook Duo UX482/Documents/GitHub/alfa-auto-car/muideenlawal/src/app/json/mainpage";
 export default function Home() {
   return (
     <>
@@ -8,7 +8,7 @@ export default function Home() {
       <About />
       <Experience />
       <Education />
-      <Certification/>
+      {/* <Certification /> */}
       <Project />
       <Footer />
     </>
@@ -26,7 +26,7 @@ function Hero() {
           <div className="item space-y-20">
             <div className="text-center">
               <h1 className="text-3xl">Kanzi Katsira Firdausi</h1>
-              <p>
+              <p className="mt-3">
                 {" "}
                 Bina Nusantara Fresh Graduate Majoring in Computer Scince | Ex
                 Frontend in Telkom Indonesia
@@ -34,18 +34,6 @@ function Hero() {
               <Social />
             </div>
           </div>
-          {/* <div className="item">
-            <Image
-              src="/img/profile-left.png"
-              alt="Muideen photo"
-              sizes="100vw"
-              width={600}
-              height={500}
-              priority={false}
-              loading="lazy"
-              className="object-fit rounded-3xl bg-[rgba(255,255,255,0.85)] shadow-[rgb(228,229,233)_0px_0px_0px_0.5px,rgba(228,229,233,0.6)_0px_0px_0px_1px,rgb(249,249,251)_0px_0px_0px_3.5px,rgb(243,244,247)_0px_0px_0px_4px] origin-bottom -rotate-1"
-            />
-          </div> */}
         </div>
       </div>
     </section>
@@ -54,56 +42,113 @@ function Hero() {
 
 function Experience() {
   return (
-    <section className="px-6 mt-5 text-[#171618]" id="education">
-    <div className="mx-auto max-w-3xl">
-      <div className="grid gap-4 mx-4">
-        <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
-          <h2 className="text-xl font-medium">
-            Education
-          </h2>
-        </div>
-        <div className="text-sm">
-          <p className="text-zinc-600">
-            Fresh graduate from Bina Nusantara University majoring in Computer
-            Science, I bring hands-on experience from a one-year internship at
-            Telkom Indonesia, where I worked as a Front-End Web Developer
-            utilizing technologies like Next.js. Furthermore, my thesis
-            project was implemented with Laravel and MySQL as database.
-          </p>
+    <section className="px-6 mt-5 text-[#171618]" id="experience">
+      <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0 max-w-3xl mx-auto">
+        <h2 className="max-w-3xl text-xl font-medium mx-4">Work Experience</h2>
+      </div>
+      <div className="container mx-4 max-w-4xl mx-auto justify-center items-center h-full">
+        <div className="relative wrap overflow-hidden p-10 h-full">
+          <div
+            className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+            style={{ left: "50%" }}
+          ></div>
+
+          <div className="mb-8 flex justify-between items-center w-full right-timeline">
+            <div className="order-1 w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 className="mx-auto font-semibold text-lg text-white">2</h1>
+            </div>
+            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-5 py-4">
+              <h3 className="font-bold text-gray-800 text-xl">
+                Frontend web developer
+              </h3>
+              <h3 className="font-bold text-white text-md">
+                Telkom Indonesia - Internship
+              </h3>
+              <h3 className="mb-3 font-bold text-white text-[12px]">
+                Mar 2023 - Feb 2024
+              </h3>
+              <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">
+                - Develop CMS (Content Management System) Dashboard using
+                AlpineJS and NextJS <br />
+    <br />
+                - Hands on experience with various third
+                party libraries in front end world such as formik for forms,
+                axios for API Interaction , and apexcharts for Charts creation -
+                GIT and Jira for coordination between team
+              </p>
+            </div>
+          </div>
+
+          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div className="order-1 w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+              <h1 className="mx-auto text-white font-semibold text-lg">1</h1>
+            </div>
+            <div className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 className="font-bold text-black text-lg ">Owner</h3>
+              <h3 className="font-bold text-white text-[14px] mt[-10px] ">
+                BekasiLaptop ( linktr.ee/BekasiLaptop)
+              </h3>
+              <h3 className="mb-3 font-bold text-white text-[12px] mt[-10px] ">
+                June 2020 - Free
+              </h3>
+              <p className="text-sm font-medium text-white text-opacity-100">
+                Substitute of my organizational experience. I Learned how to
+                communicate with client, dealing with complaints, time
+                managament, and made sure that clients are satisfied with my
+                service and laptops.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 }
 
 function Education() {
   return (
-    <section className="px-6 mt-5 text-[#171618]" id="Experience">
-    <div className="mx-auto max-w-3xl">
-      <div className="grid gap-4 mx-4">
-        <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
-          <h2 className="text-xl font-medium">
-            Experience
-          </h2>
-        </div>
-        <div className="text-sm">
-          <p className="text-zinc-600">
-            Fresh graduate from Bina Nusantara University majoring in Computer
-            Science, I bring hands-on experience from a one-year internship at
-            Telkom Indonesia, where I worked as a Front-End Web Developer
-            utilizing technologies like Next.js. Furthermore, my thesis
-            project was implemented with Laravel and MySQL as database.
-          </p>
+    <section className="px-6 mt-5 text-[#171618]" id="education">
+      <div className="mx-auto max-w-3xl">
+        <div className="grid gap-4 mx-4">
+          <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
+            <h2 className="text-xl font-medium">Education</h2>
+          </div>
+          <ol className="items-center sm:flex">
+            {educations.map((education, index) => (
+              <li key={index} className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className=" py-4 px-4 z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full dark:bg-blue-900 shadow-lg dark:ring-gray-900 shrink-0">
+                    <p className="text-[8px] text-white">{education.year}</p>
+                  </div>
+                  <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div className="mt-3 sm:pe-8">
+                  <h3 className="text-lg font-semibold text-black">
+                    {education.name}
+                  </h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    {education.description}
+                  </time>
+                  <p className="text-base font-normal">
+                    {education.additional}
+                  </p>
+                  <div className="flex justify-center rounded-lg bg-gray-50 border border-solid max-w-56 border-[rgb(232,236,241)] px-1 py-1 text-xs text-gray-600 hover:bg-gray-100 mt-3">
+                    <p className="text-center ">{education.tag}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 }
 function About() {
   return (
-    <section className="px-6 text-[#171618]" id="about">
+    <section className="px-6 py-16 text-[#171618]" id="about">
       <div className="mx-auto max-w-3xl">
         <div className="grid gap-4 mx-4">
           <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
@@ -114,8 +159,8 @@ function About() {
               </span>
             </h2>
           </div>
-          <div className="text-sm">
-            <p className="text-zinc-600">
+          <div className="text-md">
+            <p className="pt-3 text-zinc-600">
               Fresh graduate from Bina Nusantara University majoring in Computer
               Science, I bring hands-on experience from a one-year internship at
               Telkom Indonesia, where I worked as a Front-End Web Developer
@@ -129,99 +174,36 @@ function About() {
   );
 }
 
-const projects = [
-  {
-    image:,
-    name: "CMS Telkom Dashboard",
-    description: "Implemented API endpoints from backend to create CRUD operations for users, roles, and more. Implemented 401 page and restricted access based on user credentials from an API endpoint, and etc.",
-    tag: "NextJs/Javascript",
-    href: "https://github.com/mdauthentic/muideenlawal",
-  },
-  {
-    image:,
-    name: "Alfa Auto Car Application",
-    description: "Development of a full-stack web application for thesis purposes, implemented using Laravel and MySQL. Hosted at alfautocar.my.id. Some of the highlighted features:\n\n- Customer registration, login, update, reservation creation, and car repair tracking\n- Admin dashboard panel to manage articles, users, reservations from customers, and more",
-    tag: "Laravel/SQL",
-    href: "https://github.com/mdauthentic/db2erd",
-  },
-  {
-    image:,
-    name: "NextJs Portfolio",
-    description: "This website that you are currently on. Built with NextJs and deployed on Vercel.",
-    tag: "NextJs",
-    href: "https://github.com/mdauthentic/muideenlawal",
-  },
-  {
-    image:,
-    name: "Kenshin Impact",
-    description: "Website imitation of Genshin Impact to learn basic HTML, CSS, and JavaScript created at BINUS UNIVERSITY.",
-    tag: "HTML/CSS/JS",
-    href: "https://github.com/mdauthentic/muideenlawal",
-  },
-
-];
 
 const educations = [
   {
-    name: "UNIVERSITAS BINA NUSANTARA",
-    description:
-      "Bachelor's Degree - Majoring in Computer Science",
-    additional:
-    "Grade: 3,67",
-    tag: "Sep 2020 - July 2024",
+    name: "SMA JAKARTA ISLAMIC SCHOOL",
+    description: "Natural Science",
+    additional: "-",
+    tag: "2017-2020",
+    year: "2017",
   },
-];
-
-const experiences = [
   {
-    name: "Telkom Indonesia",
-    description:
-      "- Develop CMS (Content Management System) Dashboard using AlpineJS and NextJS\n\n- Hands-on experience with various third-party libraries in the frontend world such as Formik for forms, Axios for API interaction, and ApexCharts for chart creation\n\n- GIT and Jira for coordination between team",
-    additional: "Grade: 3.67",
-    tag: "Mar 2023 - Feb 2024",
+    name: "UNIVERSITAS BINA NUSANTARA",
+    description: "Bachelor's Degree - Majoring in Computer Science",
+    additional: "Grade: 3,67",
+    tag: "Sep 2020 - July 2024",
+    year: "2020",
   },
 ];
 
-const certifications= [
+const certifications = [
   {
     name: "TOEFL ITP",
-    description:
-      "TOEFL ITP with score 533 out of 677",
+    description: "TOEFL ITP with score 533 out of 677",
     tag: "Feb 2024",
   },
   {
     name: "HCIAI Huawei Ai For Junior Developer (FGA Kominfo Training)",
-    description:
-      "TOEFL ITP with score 533 out of 677",
+    description: "TOEFL ITP with score 533 out of 677",
     tag: "July 2024",
   },
 ];
-
-
-function Certification() {
-  return (
-    <section className="px-6 mt-5 text-[#171618]" id="education">
-    <div className="mx-auto max-w-3xl">
-      <div className="grid gap-4 mx-4">
-        <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
-          <h2 className="text-xl font-medium">
-            Certification
-          </h2>
-        </div>
-        <div className="text-sm">
-          <p className="text-zinc-600">
-            Fresh graduate from Bina Nusantara University majoring in Computer
-            Science, I bring hands-on experience from a one-year internship at
-            Telkom Indonesia, where I worked as a Front-End Web Developer
-            utilizing technologies like Next.js. Furthermore, my thesis
-            project was implemented with Laravel and MySQL as database.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  );
-}
 
 function Project() {
   return (
@@ -236,37 +218,36 @@ function Project() {
               </span>
             </h2>
           </div>
-
-          <ul role="list" className="divide-y divide-gray-100">
-            {projects.map((project) => (
-              <li
-                key={project.name}
-                className="flex justify-between gap-x-6 py-5"
-              >
-                <Link
-                  href={project.href}
-                  className="flex justify-between w-full"
-                >
-                  <div className="flex min-w-0 gap-x-4">
-                    <div className="min-w-0 flex-auto">
-                      <p className="text-sm font-medium leading-6 text-[#171618]">
+          <section className="mt-5 text-[#171618]" id="education">
+            <div className="mx-auto grid grid-cols-12 max-w-4xl gap-3  ">
+              {/* Loop through content for the first column */}
+              {projects.map((project, index) => (
+                <div key={index} className="col-span-4 gap-5 mx-3 mt-5">
+                  <Image
+                    src={project.image}
+                    width={500}
+                    height={500}
+                    alt="Not Available"
+                  />
+                  <div className="flex flex-row gap-4 mt-5">
+                    <div>
+                      <p className="flex text-sm font-medium leading-6 text-[#171618]">
                         {project.name}
                       </p>
-                      <p className="mt-1 text-sm leading-5 text-gray-500">
-                        {project.description}
+                    </div>
+                    <div>
+                      <p className="flex rounded-lg bg-gray-50 border border-solid border-[rgb(232,236,241)] px-3 py-1 text-xs text-gray-600 hover:bg-gray-100">
+                        {project.tag}
                       </p>
                     </div>
                   </div>
-                  <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                    <p className="rounded-lg bg-gray-50 border border-solid border-[rgb(232,236,241)] px-3 py-1 text-xs text-gray-600 hover:bg-gray-100">
-                      {project.tag}
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-
+                  <p className="mt-1 text-sm leading-5 text-gray-500">
+                    {project.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
           <div className="flex items-center justify-center mt-8">
             <Link
               className="flex justify-center items-center align-middle bg-[#171618] text-white text-sm rounded-lg gap-1.5 px-4 py-2"
@@ -295,6 +276,77 @@ function Project() {
   );
 }
 
+function Certification() {
+  return (
+    <section className="px-6 py-16 text-[#171618]" id="project">
+      <div className="mx-auto max-w-3xl">
+        <div className="mx-4">
+          <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
+            <h2 className="text-xl font-medium">
+              Certifi
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f60] to-[#f00ab3]">
+                cation
+              </span>
+            </h2>
+          </div>
+          <section className="mt-5 text-[#171618]" id="education">
+            <div className="mx-auto grid grid-cols-12 max-w-3xl px-6 gap-3  ">
+              {/* Loop through content for the first column */}
+              {projects.map((project, index) => (
+                <div key={index} className="col-span-4 gap-5 mx-3 mt-5">
+                  <Image
+                    src="/img/profile-left.png"
+                    width={400}
+                    height={300}
+                    alt="Not Available"
+                  />
+                  <div className="flex flex-row gap-4 mt-5">
+                    <div>
+                      <p className="flex text-sm font-medium leading-6 text-[#171618]">
+                        {project.name}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="flex rounded-lg bg-gray-50 border border-solid border-[rgb(232,236,241)] px-3 py-1 text-xs text-gray-600 hover:bg-gray-100">
+                        {project.tag}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-1 text-sm leading-5 text-gray-500">
+                    {project.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+          {/* <div className="flex items-center justify-center mt-8">
+            <Link
+              className="flex justify-center items-center align-middle bg-[#171618] text-white text-sm rounded-lg gap-1.5 px-4 py-2"
+              href="https://github.com/mdauthentic"
+              title="link to project in github repo"
+            >
+              <span>See all</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                ></path>
+              </svg>
+            </Link>
+          </div> */}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="px-6 py-16">
@@ -302,16 +354,11 @@ function Footer() {
         <div className="grid gap-12 mx-4 text-center">
           <div className="flex flex-col gap-2">
             <span className="font-medium text-lg text-gray-500">
-              You have to do your own growing no matter how tall your
-              grandfather was.
+              "Sacrifices must be made to achieve desirable result."
             </span>
-            <span className="font-medium text-gray-500">- Abraham Lincoln</span>
           </div>
-
           <div className="flex flex-row gap-2 justify-center text-sm">
-            <span>Copyright © {new Date().getFullYear()}</span>
-            <span>・</span>
-            <span>Muideen Lawal</span>
+            <span>Kanzi Katsira Firdausi - {new Date().getFullYear()}</span>
           </div>
         </div>
       </div>
@@ -325,7 +372,7 @@ function Social() {
       <Link
         className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
         href="https://github.com/mdauthentic"
-        title="github link"
+        title="Github link"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -340,7 +387,7 @@ function Social() {
       <Link
         className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
         href="https://linkedin.com/in/ma-lawal"
-        title="linkedin page"
+        title="Linkedin page"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -354,17 +401,41 @@ function Social() {
       </Link>
       <Link
         className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
-        href="mailto:muideen.lawal320@gmail.com"
-        title="email address"
+        href="mailto:kanzifirdausi@outlook.com"
+        title="Email address"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-          <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"></path>
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </Link>
+      <Link
+        className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
+        href="wa.me/+6287788200694"
+        title="Phone number"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
       </Link>
     </div>
