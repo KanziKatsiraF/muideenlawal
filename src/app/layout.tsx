@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react';
-import { schibstedGrotesk } from '@/fonts/font'
 import './globals.css'
 import { NavBar } from '@/components/NavBar';
 
@@ -18,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${schibstedGrotesk.variable} antialiased`}>
+      <body className={`antialiased`}>
         <NavBar />
         {children}
         <Analytics />

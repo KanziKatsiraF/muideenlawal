@@ -224,7 +224,7 @@ function Project() {
               {projects.map((project, index) => (
                 <div key={index} className="col-span-4 gap-5 mx-3 mt-5">
                   <Image
-                    src={project.image}
+                    src={project.images[0]}
                     width={500}
                     height={500}
                     alt="Not Available"
