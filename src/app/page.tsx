@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "c:/Users/Zenbook Duo UX482/Documents/GitHub/alfa-auto-car/muideenlawal/src/app/json/mainpage";
+import { projects } from "../app/json/mainpage"
 export default function Home() {
   return (
     <>
