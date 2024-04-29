@@ -15,6 +15,7 @@
         "• Implement designs from Figma to code."
       ]
     },
+    
     {
       id: "2",
       images: ["/img/alfa.png", "/img/another-image.png", "/img/yet-another-image.png"],
@@ -53,7 +54,7 @@
     },
     {
       id: "4",
-      images: ["/img/kenshin.png", "/img/another-image.png", "/img/yet-another-image.png"],
+      images: ["/img/movielist1.jpg", "/img/another-image.png", "/img/yet-another-image.png"],
       name: "Movie list",
       description:
         "Website created during my study at BINUS University to learn Laravel, and MYSQL as Database.",
@@ -65,6 +66,19 @@
         "• User can register, login, logout, and update their profile.",
         "• User can add movies to their wishlist of favorites.",
         "• Admin can perform CRUD operations for movies and actors."
+      ]
+    },
+    {
+      id: "5",
+      images: ["/img/kanziporto1.png", "/img/another-image.png", "/img/yet-another-image.png"],
+      name: "Portofolio Site",
+      description:
+        "Portofolio with Next JS, but mostly with HTML and CSS only. Trying to implement animation and ui improvement in the next update of my site",
+      tag: "NextJs/Javascript",
+      github: "",
+      href: "https://github.com/mdauthentic/muideenlawal",
+      details: [
+        "-"
       ]
     }
   ];

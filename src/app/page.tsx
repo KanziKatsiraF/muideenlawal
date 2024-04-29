@@ -371,7 +371,7 @@ function Social() {
     <div className="flex gap-4 pt-6 justify-center items-center">
       <Link
         className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
-        href="https://github.com/mdauthentic"
+        href="https://github.com/KanziKatsiraF"
         title="Github link"
       >
         <svg
@@ -386,7 +386,7 @@ function Social() {
       </Link>
       <Link
         className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
-        href="https://linkedin.com/in/ma-lawal"
+        href="https://www.linkedin.com/in/kanzi-katsira-firdausi-bb794816b/"
         title="Linkedin page"
       >
         <svg
