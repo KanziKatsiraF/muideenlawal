@@ -1,16 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "../app/json/mainpage"
+import { projects } from "../app/json/mainpage";
+import Template from "./template";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <Experience />
-      <Education />
+      <Template>
+        <Hero />
+      </Template>
+      <Template>
+        <About />
+      </Template>
+      <Template>
+        <Experience />
+      </Template>
+      <Template>
+        <Education />
+      </Template>
+      <Template>
+        <Project />
+      </Template>
       {/* <Certification /> */}
-      <Project />
-      <Footer />
+      <Template>
+        <Footer />
+      </Template>
     </>
   );
 }
@@ -65,17 +78,16 @@ function Experience() {
               <h3 className="font-bold text-white text-md">
                 Telkom Indonesia - Internship
               </h3>
-              <h3 className="mb-3 font-bold text-white text-[12px]">
+              <h3 className="mb-3 font-bold text-white text-[12px] mt[-10px]">
                 Mar 2023 - Feb 2024
               </h3>
               <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">
                 - Develop CMS (Content Management System) Dashboard using
                 AlpineJS and NextJS <br />
-    <br />
-                - Hands on experience with various third
-                party libraries in front end world such as formik for forms,
-                axios for API Interaction , and apexcharts for Charts creation -
-                GIT and Jira for coordination between team
+                <br />- Hands on experience with various third party libraries
+                in front end world such as formik for forms, axios for API
+                Interaction , and apexcharts for Charts creation - GIT and Jira
+                for coordination between team
               </p>
             </div>
           </div>
@@ -86,14 +98,14 @@ function Experience() {
               <h1 className="mx-auto text-white font-semibold text-lg">1</h1>
             </div>
             <div className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="font-bold text-black text-lg ">Owner</h3>
-              <h3 className="font-bold text-white text-[14px] mt[-10px] ">
+              <h3 className="font-bold text-gray-800 text-xl">Owner</h3>
+              <h3 className="font-bold text-white text-[11px] md:text-[14px] mt[-10px]">
                 BekasiLaptop ( linktr.ee/BekasiLaptop)
               </h3>
               <h3 className="mb-3 font-bold text-white text-[12px] mt[-10px] ">
-                June 2020 - Free
+                June 2020 - now
               </h3>
-              <p className="text-sm font-medium text-white text-opacity-100">
+              <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">
                 Substitute of my organizational experience. I Learned how to
                 communicate with client, dealing with complaints, time
                 managament, and made sure that clients are satisfied with my
@@ -174,7 +186,6 @@ function About() {
   );
 }
 
-
 const educations = [
   {
     name: "SMA JAKARTA ISLAMIC SCHOOL",
@@ -229,14 +240,14 @@ function Project() {
                     height={500}
                     alt="Not Available"
                   />
-                  <div className="flex flex-row gap-4 mt-5">
+                  <div className="flex flex-col md:flex-row md:gap-4 gap-3 mb-3 md:mb-0 mt-5">
                     <div>
                       <p className="flex text-sm font-medium leading-6 text-[#171618]">
                         {project.name}
                       </p>
                     </div>
                     <div>
-                      <p className="flex rounded-lg bg-gray-50 border border-solid border-[rgb(232,236,241)] px-3 py-1 text-xs text-gray-600 hover:bg-gray-100">
+                      <p className="flex-row rounded-lg bg-gray-50 border border-solid border-[rgb(232,236,241)] px-3 py-1 text-xs text-gray-600 hover:bg-gray-100">
                         {project.tag}
                       </p>
                     </div>
@@ -248,7 +259,7 @@ function Project() {
               ))}
             </div>
           </section>
-          <div className="flex items-center justify-center mt-8">
+          {/* <div className="flex items-center justify-center mt-8">
             <Link
               className="flex justify-center items-center align-middle bg-[#171618] text-white text-sm rounded-lg gap-1.5 px-4 py-2"
               href="https://github.com/mdauthentic"
@@ -269,7 +280,7 @@ function Project() {
                 ></path>
               </svg>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
