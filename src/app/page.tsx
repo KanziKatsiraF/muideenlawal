@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "../app/json/mainpage";
 import Template from "./template";
+import { Hero } from "@/components/Hero";
+
 export default function Home() {
   return (
     <>
@@ -28,30 +30,6 @@ export default function Home() {
   );
 }
 
-function Hero() {
-  return (
-    <section
-      className="bg-[radial-gradient(50%_50%_at_50%_50%,rgba(106,207,214,0.16)_0%,rgba(106,207,214,0)_100%)] px-6 py-16 text-[#171618]"
-      id="home"
-    >
-      <div className="mx-auto max-w-3xl">
-        <div className="content-center">
-          <div className="item space-y-20">
-            <div className="text-center">
-              <h1 className="text-3xl">Kanzi Katsira Firdausi</h1>
-              <p className="mt-3">
-                {" "}
-                Bina Nusantara Fresh Graduate Majoring in Computer Scince | Ex
-                Frontend in Telkom Indonesia
-              </p>
-              <Social />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Experience() {
   return (
@@ -62,16 +40,16 @@ function Experience() {
       <div className="container mx-4 max-w-4xl mx-auto justify-center items-center h-full">
         <div className="relative wrap overflow-hidden p-10 h-full">
           <div
-            className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+            className="hidden md:flex border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
             style={{ left: "50%" }}
           ></div>
 
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
+            <div className="order-1 w-5/12 md:flex hidden"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <h1 className="mx-auto font-semibold text-lg text-white">2</h1>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-5 py-4">
+            <div className="order-1 bg-red-400 rounded-lg shadow-xl md:w-5/12 w-10/12 px-5 py-4">
               <h3 className="font-bold text-gray-800 text-xl">
                 Frontend web developer
               </h3>
@@ -93,11 +71,11 @@ function Experience() {
           </div>
 
           <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
+            <div className="order-1 w-5/12 md:flex hidden"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <h1 className="mx-auto text-white font-semibold text-lg">1</h1>
             </div>
-            <div className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-gray-400 rounded-lg shadow-xl md:w-5/12 w-10/12 px-6 py-4">
               <h3 className="font-bold text-gray-800 text-xl">Owner</h3>
               <h3 className="font-bold text-white text-[11px] md:text-[14px] mt[-10px]">
                 BekasiLaptop ( linktr.ee/BekasiLaptop)
@@ -233,7 +211,7 @@ function Project() {
             <div className="mx-auto grid grid-cols-12 max-w-4xl gap-3  ">
               {/* Loop through content for the first column */}
               {projects.map((project, index) => (
-                <div key={index} className="col-span-4 gap-5 mx-3 mt-5">
+                <div key={index} className="md:col-span-4 col-span-6 gap-5 mx-3 mt-5">
                   <Image
                     src={project.images[0]}
                     width={500}
@@ -369,7 +347,9 @@ function Footer() {
             </span>
           </div>
           <div className="flex flex-row gap-2 justify-center text-sm">
+            <strong>
             <span>Kanzi Katsira Firdausi - {new Date().getFullYear()}</span>
+            </strong>
           </div>
         </div>
       </div>
@@ -377,78 +357,3 @@ function Footer() {
   );
 }
 
-function Social() {
-  return (
-    <div className="flex gap-4 pt-6 justify-center items-center">
-      <Link
-        className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
-        href="https://github.com/KanziKatsiraF"
-        title="Github link"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-        </svg>
-      </Link>
-      <Link
-        className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
-        href="https://www.linkedin.com/in/kanzi-katsira-firdausi-bb794816b/"
-        title="Linkedin page"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
-        </svg>
-      </Link>
-      <Link
-        className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
-        href="mailto:kanzifirdausi@outlook.com"
-        title="Email address"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#ffffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-      </Link>
-      <Link
-        className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
-        href="wa.me/+6287788200694"
-        title="Phone number"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#ffffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-        </svg>
-      </Link>
-    </div>
-  );
-}
