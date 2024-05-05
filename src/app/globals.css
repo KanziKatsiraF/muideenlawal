@@ -9,7 +9,11 @@
 
 body {
     /* background: #fff; */
+    scroll-behavior:smooth;
+    margin: 0;
+    padding: 0;
     background-color: #f9fcff;
+    background: url("/img/bg.jpg");
 background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
     hyphens: auto;
     -webkit-font-smoothing: antialiased

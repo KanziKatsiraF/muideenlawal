@@ -7,7 +7,7 @@ export function Hero() {
       className="bg-[radial-gradient(50%_50%_at_50%_50%,rgba(106,207,214,0.16)_0%,rgba(106,207,214,0)_100%)] px-6 py-16 text-[#171618]"
       id="home"
     >
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl py-5 my-5">
         <div className="content-center">
           <div className="item space-y-20">
             <div className="text-center">
@@ -16,11 +16,11 @@ export function Hero() {
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
                     "Halo 👋",
-                    3000,
+                    2500,
                     "Hi 👋",
-                    3000, // wait 1s before replacing "Mice" with "Hamsters"
+                    2500, // wait 1s before replacing "Mice" with "Hamsters"
                     "こんにちは 👋",
-                    3000,
+                    2500,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -32,7 +32,7 @@ export function Hero() {
                 />
               </strong>
               <strong className="bg-yellow-400">
-              <h1 className="text-3xl">Kanzi Katsira Firdausi</h1>
+              <h1 className="text-5xl my-3">Kanzi Katsira Firdausi</h1>
               </strong>
               <p className="mt-2 italic">Binus University Fresh Graduate Computer Science Student</p>
               <Social />
@@ -46,7 +46,7 @@ export function Hero() {
 
 function Social() {
   return (
-    <div className="flex gap-4 pt-6 justify-center items-center">
+    <div className="flex gap-4 pt-6 justify-center items-center mb-3">
       <Link
         className="inline-flex rounded-xl p-2 bg-[#171618] text-white hover:bg-zinc-700 focus-visible:outline"
         href="https://github.com/KanziKatsiraF"

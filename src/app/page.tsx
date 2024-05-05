@@ -22,7 +22,6 @@ export default function Home() {
       <Template>
         <Project />
       </Template>
-      {/* <Certification /> */}
       <Template>
         <Footer />
       </Template>
@@ -35,25 +34,30 @@ function Experience() {
   return (
     <section className="px-6 mt-5 text-[#171618]" id="experience">
       <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0 max-w-3xl mx-auto">
-        <h2 className="max-w-3xl text-xl font-medium mx-4">Work Experience</h2>
+        <h2 className="max-w-3xl text-2xl font-medium mx-4">Work Expe
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f60] to-[#f00ab3]">
+        rience
+              </span>
+        </h2>
+        
       </div>
       <div className="container mx-4 max-w-4xl mx-auto justify-center items-center h-full">
         <div className="relative wrap overflow-hidden p-10 h-full">
           <div
-            className="hidden md:flex border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+            className="hidden md:flex border-2-2 absolute border-opacity-20 border-gray-700 h-full border md:ml-5"
             style={{ left: "50%" }}
           ></div>
 
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
             <div className="order-1 w-5/12 md:flex hidden"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full md:ml-10">
               <h1 className="mx-auto font-semibold text-lg text-white">2</h1>
             </div>
             <div className="order-1 bg-red-400 rounded-lg shadow-xl md:w-5/12 w-10/12 px-5 py-4">
               <h3 className="font-bold text-gray-800 text-xl">
-                Frontend web developer
+                Frontend web developer 
               </h3>
-              <h3 className="font-bold text-white text-md">
+              <h3 className="font-bold text-white text-[11px] md:text-[14px] mt[-10px]">
                 Telkom Indonesia - Internship
               </h3>
               <h3 className="mb-3 font-bold text-white text-[12px] mt[-10px]">
@@ -73,9 +77,9 @@ function Experience() {
           <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
             <div className="order-1 w-5/12 md:flex hidden"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 className="mx-auto text-white font-semibold text-lg">1</h1>
+              <h1 className="mx-auto text-white font-semibold text-lg ">1</h1>
             </div>
-            <div className="order-1 bg-gray-400 rounded-lg shadow-xl md:w-5/12 w-10/12 px-6 py-4">
+            <div className="order-1 bg-gray-400 rounded-lg shadow-xl md:w-5/12 w-10/12 px-6 py-4 md:ml-10">
               <h3 className="font-bold text-gray-800 text-xl">Owner</h3>
               <h3 className="font-bold text-white text-[11px] md:text-[14px] mt[-10px]">
                 BekasiLaptop ( linktr.ee/BekasiLaptop)
@@ -103,7 +107,11 @@ function Education() {
       <div className="mx-auto max-w-3xl">
         <div className="grid gap-4 mx-4">
           <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
-            <h2 className="text-xl font-medium">Education</h2>
+            <h2 className="text-2xl font-medium">Educ
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f60] to-[#f00ab3]">
+            ation
+              </span>
+            </h2>
           </div>
           <ol className="items-center sm:flex">
             {educations.map((education, index) => (
@@ -139,10 +147,10 @@ function Education() {
 function About() {
   return (
     <section className="px-6 py-16 text-[#171618]" id="about">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl py-5 my-6">
         <div className="grid gap-4 mx-4">
           <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
-            <h2 className="text-xl font-medium">
+            <h2 className="text-2xl font-medium">
               Abo
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f60] to-[#f00ab3]">
                 ut Me
@@ -200,7 +208,7 @@ function Project() {
       <div className="mx-auto max-w-3xl">
         <div className="mx-4">
           <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
-            <h2 className="text-xl font-medium">
+            <h2 className="text-2xl font-medium">
               Proj
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f60] to-[#f00ab3]">
                 ects
@@ -212,12 +220,15 @@ function Project() {
               {/* Loop through content for the first column */}
               {projects.map((project, index) => (
                 <div key={index} className="md:col-span-4 col-span-6 gap-5 mx-3 mt-5">
-                  <Image
-                    src={project.images[0]}
-                    width={500}
-                    height={500}
-                    alt="Not Available"
-                  />
+                  <div className="">
+                    <img src={project.images[0]} className="max-h-10 md:w-full  w-9/12 md:max-h-full" alt="" />
+            {/* <Image
+    src={project.images[0]}
+    width={500}
+    height={10}
+    alt="Not Available"
+/> */}
+                  </div>
                   <div className="flex flex-col md:flex-row md:gap-4 gap-3 mb-3 md:mb-0 mt-5">
                     <div>
                       <p className="flex text-sm font-medium leading-6 text-[#171618]">
@@ -271,7 +282,7 @@ function Certification() {
       <div className="mx-auto max-w-3xl">
         <div className="mx-4">
           <div className="flex items-start flex-[1_0_0px] flex-col flex-nowrap gap-1 h-auto justify-start p-0">
-            <h2 className="text-xl font-medium">
+            <h2 className="text-2xl font-medium">
               Certifi
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f60] to-[#f00ab3]">
                 cation
